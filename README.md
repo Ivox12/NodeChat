@@ -1,24 +1,25 @@
-PARA FAZER O PROJETO RODAR É NECESSARIO OS SEGUINTES PASSOS
+### CHAT WITH NODE.JS AND SOCKET.IO
 
+## PARA FAZER O PROJETO RODAR É NECESSARIO OS SEGUINTES PASSOS
 BAIXAR SOCKET.IO (COMUNICAÇÃO EM TEMPO REAL)
-# npm istall socket.io 
+npm istall socket.io 
 
 BAIXAR MYSQL2 (PARA CONECTAR AO BD)
-# npm install mysql2
+npm install mysql2
 
 CONFIGURACAO DO SEU BD ESTA EM ".env" 
 
 PARA EXECUTAR
-# node app.js 
+node app.js 
 
 OU PARA NAO FICAR REINICIANDO "NA MAO"
 INSTALE NODEMON
 
-# npm install nodemon
+npm install nodemon
 
 PARA INICIAR 
 
-# npx nodemon app.js
+npx nodemon app.js
 
 APP.JS (SERVER-SIDE)
 USER.JS (CLIENT-SIDE)
