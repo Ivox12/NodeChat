@@ -3,17 +3,6 @@ html, body{
     margin: 0;
     padding: 0;
 }
-body{
-    background:#302F31;
-    padding:10px;
-}
-
-#init {
-    position: fixed;
-    top: 40%;
-    width: 100%;
-    text-align: center;
-}
 
 form{
     margin:15px 0;
