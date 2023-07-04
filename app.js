@@ -1,11 +1,15 @@
-let app = require('http').createServer(resposta);
+const express = require('express');
+const http = require('http');
 let fs = require('fs');
-let io = require('socket.io')(app);
+let socketio = require('socket.io');
 const sql = require('./.env');
 const {hashCode, newUser, pegarDataAtual, empty, getNick, auth } = require('./functions');
 
+const app = express();
+const server = http.createServer(app);
+const io = socketio(server);
 
-
+app.use(express.static('public'));
 
 sql.query("SELECT * FROM users", function(err, rows){
     if(!err) {
@@ -16,27 +20,14 @@ sql.query("SELECT * FROM users", function(err, rows){
     }
 })
 
-app.listen(3000);
-console.log("Aplicação está em execução...");
+const port = 3000;
+server.listen(port, () => {
+  console.log(`Aplicação está em execução na porta ${port}`);
+});
 
-function resposta (req, res) {
-    var arquivo = "";
-    if(req.url == "/"){
-        arquivo = __dirname + '/public/index.html';
-    }else{
-        arquivo = __dirname + req.url;
-    }
-    fs.readFile(arquivo,
-        function (err, data) {
-            if (err) {
-                res.writeHead(404);
-                return res.end('Página ou arquivo não encontrados');
-            }
-            res.writeHead(200);
-            res.end(data);
-        }
-    );
-}
+app.use(function(req, res) {
+    res.status(404).send('Página ou arquivo não encontrados');
+});
 let tempChat = []
 let userArr = []
 io.on("connection", function(socket){
