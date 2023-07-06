@@ -14,7 +14,7 @@
                 <h4 class="col-12 text-shadow">Login</h4>
                 <input class="col-12 my-3 rounded border-0 shadow" type="text" id="userName" placeholder="login" style="height: 50px;">
                 <input class="col-12 my-3 rounded border-0 shadow" type="text" id="password" placeholder="password" style="height: 50px;">
-                <button class="col-12 my-3 rounded border-0 shadow" id="login" style="height: 50px;">OK</button>
+                <button class="col-12 my-3 rounded border-0 shadow bg-black text-white" id="login" style="height: 50px;">OK</button>
                 <div class="text-center col-12 mt-3">
                     <span id="btn-reg" class="text-shadow" style="cursor: pointer;">Sign up</span>
                 </div>
@@ -24,27 +24,27 @@
                 <input class="col-12 my-3 rounded border-0 shadow" type="text" name="" id="newName" placeholder="login" style="height: 50px;">
                 <input class="col-12 my-3 rounded border-0 shadow" type="text" name="" id="nickName" placeholder="nick" style="height: 50px;">
                 <input class="col-12 my-3 rounded border-0 shadow" type="text" name="" id="newPassword" placeholder="password" style="height: 50px;">
-                <button class="col-12 my-3 rounded border-0 shadow" id="register" style="height: 50px;">OK</button>
+                <button class="col-12 my-3 rounded border-0 shadow bg-black text-white" id="register" style="height: 50px;">OK</button>
                 <div class="col-12 text-center mt-3">
                     <span id="btn-log" class="text-shadow" style="cursor: pointer;">Sign in</span>
                 </div>
             </div>
         </div>
     </section>
-    <section class="col-12 m-auto py-4" id="chatBD" style="display: none;">
-        <div class="col-10 m-auto d-flex flex-wrap justify-content-center align-items-center rounded-circle" style="height: 80vh;">
-            <div class="col-3 bg-warning rounded-start h-100">
+    <section class="col-12 m-auto py-4 bg-wave" id="chatBD" style="display: none;">
+        <div class="col-10 m-auto d-flex flex-wrap justify-content-center align-items-center rounded-circle" style="height: 90%;">
+            <div class="col-3 bg-warning rounded-start" style="height:90%;">
                 <h3 class="text-center">Users</h3>
                 <div class="col-3 users text-center">
             </div>
             </div>
-            <div class="col-7 overflow-auto bg-secondary rounded-end" style="max-height: 500px;min-height: 100%;">
-                <div class="m-3" id="historico_mensagens"></div>
+            <div class="col-7 bg-chat text-white shadow-lg" style="height: 90%;">
+                <div class="m-3 overflow-auto rounded-end" id="historico_mensagens" style="height: 85%; width: 95%;"></div>
+                <form class="col-12 text-center position-absolute m-3" id='chat' style="max-height: 10%; bottom:0;">
+                    <input type='text' class="col-7" id='texto_mensagem' name='texto_mensagem' style="height: 40px;" />
+                    <input type='submit' class="col-4" value='Enviar mensagem!' style="height: 40px;" />
+                </form>
             </div>
-            <form class="col-12 text-center my-3" id='chat'>
-                <input type='text' class="col-7" id='texto_mensagem' name='texto_mensagem' style="height: 50px;" />
-                <input type='submit' class="col-3" value='Enviar mensagem!' style="height: 50px;" />
-            </form>
         </div>
     </section>
     <div id="popups" class="d-flex justify-content-center position-absolute w-100" style="top: 0;">

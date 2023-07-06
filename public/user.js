@@ -102,17 +102,17 @@ $("form#chat").submit(function(e){
 socket.on("atualizar users", function(users){
     $(".users").empty();
     users.forEach(function(users) {
-        $(".users").append("<p>" + users.name + "</p>");
+        $(".users").append("<span class='p-1 m-3 rounded text-center d-block'>" + users.name + "</span>");
     });
 });
 socket.on("atualizar mensagens", function(mensagem){
-    var mensagem_formatada = $("<p />").text(mensagem);
+    var mensagem_formatada = $("<span class='p-1 m-3 rounded bg-secondary text-center d-block' />").text(mensagem);
     $("#historico_mensagens").append(mensagem_formatada);
 });
 
 socket.on("restore chat", function(hist){
     hist.forEach(function(message){
-        var mensagem_formatada = $("<p />").text(message);
+        var mensagem_formatada = $("<span class='p-1 m-3 rounded bg-secondary text-center d-block' />").text(message);
         $("#historico_mensagens").append(mensagem_formatada);
     });
 });

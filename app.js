@@ -20,7 +20,7 @@ sql.query("SELECT * FROM users", function(err, rows){
     }
 })
 
-const port = 3000;
+const port = 3000; 
 server.listen(port, () => {
   console.log(`Aplicação está em execução na porta ${port}`);
 });
