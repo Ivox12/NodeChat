@@ -1,0 +1,25 @@
+{
+  "name": "chatjs",
+  "version": "1.0.0",
+  "description": "Chat made in Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivox12/NodeChat.git"
+  },
+  "author": "Ivox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivox12/NodeChat/issues"
+  },
+  "homepage": "https://github.com/Ivox12/NodeChat#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.5.0",
+    "nodemon": "^1.14.9",
+    "socket.io": "^4.7.1"
+  }
+}
