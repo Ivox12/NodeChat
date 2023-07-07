@@ -7,9 +7,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
-<body>
-    <section class="bg-wave" id="init">
-        <div class="position-fixed justify-content-around flex-wrap align-items-center col-12" style="top:20%; display: flex;">
+<body class="bg-wave">
+    <section id="init">
+        <div class="justify-content-around flex-wrap align-items-center col-12" style="margin-top:10%; display: flex;">
             <div id="square-login" class="col-lg-5 mb-3 col-10 flex-wrap bg-init text-white rounded p-3 shadow" style="display: flex;">
                 <h4 class="col-12 text-shadow">Login</h4>
                 <input class="col-12 my-3 rounded border-0 shadow" type="text" id="userName" placeholder="login" style="height: 50px;">
@@ -31,16 +31,16 @@
             </div>
         </div>
     </section>
-    <section class="col-12 m-auto py-4 bg-wave" id="chatBD" style="display: none;">
-        <div class="col-10 m-auto d-flex flex-wrap justify-content-center align-items-center rounded-circle" style="height: 90%;">
-            <div class="col-3 bg-warning rounded-start" style="height:90%;">
+    <section class="col-12 m-auto py-4" id="chatBD" style="display: none;">
+        <div class="col-10 m-auto d-flex flex-wrap justify-content-center align-items-center rounded-circle" style="height: 100%;">
+            <div class="col-3 bg-warning rounded-start" style="height:600px;">
                 <h3 class="text-center">Users</h3>
                 <div class="col-3 users text-center">
+                </div>
             </div>
-            </div>
-            <div class="col-7 bg-chat text-white shadow-lg" style="height: 90%;">
-                <div class="m-3 overflow-auto rounded-end" id="historico_mensagens" style="height: 85%; width: 95%;"></div>
-                <form class="col-12 text-center position-absolute m-3" id='chat' style="max-height: 10%; bottom:0;">
+            <div class="col-7 bg-chat text-white shadow-lg" style="height: 600px;">
+                <div class="overflow-auto mt-2 rounded-end" id="historico_mensagens" style="height: 500px; width: 100%;"></div>
+                <form class="col-12 text-center p-3" id='chat' style="max-height: 10%; bottom:0;">
                     <input type='text' class="col-7" id='texto_mensagem' name='texto_mensagem' style="height: 40px;" />
                     <input type='submit' class="col-4" value='Enviar mensagem!' style="height: 40px;" />
                 </form>
